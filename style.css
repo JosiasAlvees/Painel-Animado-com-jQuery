@@ -1,0 +1,106 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* ===== CORPO ===== */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ===== TÍTULOS ===== */
+h1 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* ===== BOTÕES ===== */
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+button {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #1e3a8a, #1d4ed8);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* ===== PAINEL ===== */
+#painel {
+  width: 350px;
+  background-color: #ffffff;
+  color: #333;
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: none; /* começa oculto */
+  position: relative;
+  overflow: hidden;
+  animation: flutuar 3s ease-in-out infinite alternate;
+}
+
+/* Pequeno efeito de flutuação */
+@keyframes flutuar {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-5px); }
+}
+
+/* ===== TEXTO DENTRO DO PAINEL ===== */
+#painel p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 500px) {
+  #painel {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  button {
+    padding: 8px 14px;
+    font-size: 0.95em;
+  }
+}
